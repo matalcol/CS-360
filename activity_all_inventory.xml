@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllInventoryActivity">
+
+    <Button
+        android:id="@+id/addRemoveItem"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="7dp"
+        android:onClick="gotoAddRemoveItem"
+        android:text="Add/Remove Item"
+        app:layout_constraintBottom_toTopOf="@+id/MainMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="378dp"
+        android:layout_height="495dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <TableLayout
+            android:id="@+id/inventoryTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:stretchColumns="*">
+
+            <!-- Table Header -->
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Item"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Location"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="76dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Quantity"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Last Change"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="121dp"
+        android:text="All - Inventory"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/MainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="52dp"
+        android:onClick="gotoMainMenu"
+        android:text="Main Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

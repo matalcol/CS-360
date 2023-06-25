@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LogIn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/CreateAdmin"
+        android:layout_width="156dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="52dp"
+        android:onClick="gotoAdmin"
+        android:text="Create Admin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="152dp"
+        android:text="Inventory App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterUserID"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="77dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Enter User ID"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/textView10"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="56dp"-->
+<!--        android:text="Forgot Password?"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword6" />-->
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="343dp"
+        android:text="User ID:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="28dp"
+        android:text="Password:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/enterPW"
+        android:layout_width="250dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/enterUserID" />
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="156dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="119dp"
+        android:onClick="gotoMainMenu"
+        android:text="Log In"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterPW" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

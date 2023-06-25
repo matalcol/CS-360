@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchInventoryActivity">
+
+    <Button
+        android:id="@+id/addRemoveItem"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="7dp"
+        android:onClick="gotoAddRemoveItem"
+        android:text="Add/Remove Item"
+        app:layout_constraintBottom_toTopOf="@+id/MainMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/SearchResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="158dp"
+        android:text="Search Results"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Search" />
+
+    <EditText
+        android:id="@+id/enterItem"
+        android:layout_width="247dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Item #"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="27dp"
+        android:text="Location:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/enterLocation"
+        android:layout_width="247dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="1dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Enter Location"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/enterItem" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="136dp"
+        android:text="Item:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="27dp"
+        android:text="Last Change:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/enterLastChange"
+        android:layout_width="247dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="1dp"
+        android:ems="10"
+        android:hint="mm-dd-yyyy"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/enterLocation" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="187dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="112dp"
+        android:text="Search Inventory"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Search"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="120dp"
+        android:onClick="showTable"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterLastChange" />
+
+    <Button
+        android:id="@+id/MainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="52dp"
+        android:onClick="gotoMainMenu"
+        android:text="Main Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="103dp"
+        android:text="Enter at least one Search Criteria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <ScrollView
+        android:layout_width="376dp"
+        android:layout_height="215dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchResults">
+
+        <TableLayout
+            android:id="@+id/inventoryTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:stretchColumns="*"
+            android:visibility="gone">
+
+            <!-- Table Header -->
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Item"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Location"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="76dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Quantity"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Last Change"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
